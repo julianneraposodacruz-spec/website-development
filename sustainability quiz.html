@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>Sustainability quiz</title>
+    <style>
+        body {
+            background-image: url("sustain.jpeg");
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        div {
+            text-align: center;
+
+        }
+    </style>
+    <script>
+        function checkanswer(answer, number) {
+            answers = ["A process to turn waste into new products", "Turn off lights when leaving a room", "Water is essential for life and theres a limited supply", "plant trees and recycle"];
+            var id = "answer" + String(number);
+            if (number == 1) {
+                if (answer == answers[0]) {
+
+                    document.getElementById(id).innerHTML = "Correct!";
+
+
+                }
+                else {
+                    document.getElementById(id).innerHTML = "wrong!";
+
+                }
+            }
+            if (number == 2) {
+                if (answer == answers[1]) {
+                    var id = "answer" + String(number);
+                    document.getElementById(id).innerHTML = "Correct!";
+
+
+                }
+                else {
+                    document.getElementById(id).innerHTML = "wrong!";
+
+                }
+            }
+            if (number == 3) {
+                if (answer == answers[2]) {
+
+                    var id = "answer" + String(number);
+                    document.getElementById(id).innerHTML = "Correct!";
+
+
+                }
+                else {
+                    document.getElementById(id).innerHTML = "wrong!";
+
+                }
+            }
+            if (number == 4) {
+                if (answer == answers[3]) {
+                    var id = "answer" + String(number);
+                    document.getElementById(id).innerHTML = "Correct!";
+
+
+
+                }
+                else {
+                    document.getElementById(id).innerHTML = "wrong!";
+
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to the Sustainability Quiz!</h1>
+        <h1>What is recycling?</h1>
+        <button onclick="checkanswer('A process to turn waste into new products',1)">
+            A process to turn waste into new products
+        </button>
+        <button onclick="checkanswer('Throwing garbage into the ocean',1)">
+            Throwing garbage into the ocean
+        </button>
+        <button onclick="checkanswer('Reusing old toys',1)">
+            reusing old toys
+        </button>
+        <h1 id="answer1"></h1>
+
+
+
+        <h1>How can we save energy at home?</h1>
+        <button onclick="checkanswer('Turn off lights when leaving a room',2)">
+            Turn off lights when leaving a room
+        </button>
+
+        <button onclick="checkanswer('Leave the refrigerator door open',2)">
+            Keep the TV on all day
+        </button>
+        <button onclick="checkanswer('Use the dryer instead of hanging clothes outside',2)">
+            Use the dryer instead of hanging clothes outside
+        </button>
+        <h1 id="answer2"></h1>
+
+
+
+        <h1>Why is it important to conserve water?</h1>
+        <button onclick="checkanswer('Water is unlimited ,so we dont need to worry about it',3)">
+            Water is unlimited, so we don't need to worry about it
+        </button>
+
+        <button onclick="checkanswer('Water is essential for life and theres a limited supply',3)">
+            Water is essential for life and there's a limited supply
+        </button>
+        <button onclick="checkanswer('Water is only used for drinking',3)">
+            Water is only used for drinking
+        </button>
+        <h1 id="answer3"></h1>
+
+
+
+
+        <h1>how can we help the environment?</h1>
+        <button onclick="checkanswer('plant trees and recycle',4)">
+            plant trees and recycle
+        </button>
+
+        <button onclick="checkanswer('leave lights and electronics on all the time',4)">
+            leave lights and electronics on all the time
+        </button>
+        <button onclick="checkanswer('throw trash on the ground',4)">
+            throw trash on the ground
+        </button>
+        <h1 id="answer4"></h1>
+    </div>
+
+</body>
+
+</html>
