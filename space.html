@@ -79,10 +79,10 @@
         }
     </style>
     <script>
-        var names = ["mercury ", "venus", "earth", "mars"];
-        var circrumfrence = ["15329km ", "38025km ", "40075km ", "21266km "];
-        var distancefromsun = ["57.9 million km ", "108.2 million km ", "149.6 million km ", "227.9 million km "];
-        var info = ["Mercury is the smallest planet in our solar system and the closest to the Sun orbiting it every 88 Earth days. It is a rocky, cratered world, similar in appearance to Earth's Moon, with extreme temperature swings from 430°C in the day to -180°C at night. It has no significant atmosphere and is the fastest planet in the solar system.", "Venus is the second planet from the Sun and Earth's closest, similarly sized neighbor, often called its twin. It is the hottest planet in the Solar System—with surface temperatures around —due to a thick toxic carbon dioxide atmosphere and sulfuric acid clouds. Venus rotates backwards and extremely slowly, meaning its day lasts longer than its year.", "Earth is the third planet from the Sun and the only known place in the universe to harbor life. It has a diverse climate and geography, with 70% of its surface covered by water. Earth's atmosphere is rich in nitrogen and oxygen, supporting a wide variety of ecosystems. It has one natural satellite, the Moon, which influences tides and stabilizes Earth's axial tilt.", "Mars is the fourth planet from the Sun and is often called the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface. It has a thin atmosphere primarily composed of carbon dioxide and experiences seasonal changes similar to Earth."]
+        var names = ["mercury ", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+        var circrumfrence = ["15329km ", "38025km ", "40075km ", "21266km ", "439267km ", "378293km ", "232730km ", "227760km "];
+        var distancefromsun = ["57.9 million km ", "108.2 million km ", "149.6 million km ", "227.9 million km ", "778.5 million km ", "1433.5 million km ", "2872.5 million km ", "4495.1 million km "];
+        var info = ["Mercury is the smallest planet in our solar system and the closest to the Sun orbiting it every 88 Earth days. It is a rocky, cratered world, similar in appearance to Earth's Moon, with extreme temperature swings from 430°C in the day to -180°C at night. It has no significant atmosphere and is the fastest planet in the solar system.", "Venus is the second planet from the Sun and Earth's closest, similarly sized neighbor, often called its twin. It is the hottest planet in the Solar System—with surface temperatures around —due to a thick toxic carbon dioxide atmosphere and sulfuric acid clouds. Venus rotates backwards and extremely slowly, meaning its day lasts longer than its year.", "Earth is the third planet from the Sun and the only known place in the universe to harbor life. It has a diverse climate and geography, with 70% of its surface covered by water. Earth's atmosphere is rich in nitrogen and oxygen, supporting a wide variety of ecosystems. It has one natural satellite, the Moon, which influences tides and stabilizes Earth's axial tilt.", "Mars is the fourth planet from the Sun and is often called the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface. It has a thin atmosphere primarily composed of carbon dioxide and experiences seasonal changes similar to Earth.", "Jupiter is the largest planet in our solar system and is a gas giant with a prominent Great Red Spot storm. It has at least 79 moons and a faint ring system.", "Saturn is known for its spectacular ring system made of ice and rock particles. It is also a gas giant with many moons, including Titan, which has a thick atmosphere.", "Uranus is an ice giant with a unique sideways rotation axis, making it appear to roll on its side as it orbits the Sun. It has a blue-green color due to methane in its atmosphere.", "Neptune is the farthest planet from the Sun and is also an ice giant with strong winds reaching speeds of over 2,000 km/h."]
         function showDetails(planetNumber) {
             var details = document.getElementById("details");
             details.style.display = "block";
@@ -114,6 +114,21 @@
         </div>
         <div id="mars" class="planets" onclick="showDetails(3)">
             <img src="mars.jpeg">
+        </div>
+        <div id="jupiter" class="planets" onclick="showDetails(4)">
+            <img src="jupiter.jpeg">
+
+        </div>
+        <div id="saturn" class="planets" onclick="showDetails(5)">
+            <img src="saturn.jpeg">
+        </div>
+
+        <div id="uranus" class="planets" onclick="showDetails(6)">
+            <img src="uranus.jpeg">
+        </div>
+
+        <div id="neptune" class="planets" onclick="showDetails(7)">
+            <img src="neptune.jpeg">
         </div>
 
 
