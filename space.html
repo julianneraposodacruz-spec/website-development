@@ -17,7 +17,7 @@
             padding: 15px;
             border: 5px solid white;
             border-radius: 20px;
-            background-image: url("galaxy.jpg");
+            background-image: url ("space.jpeg");
             margin-top: 50px;
         }
 
@@ -51,19 +51,48 @@
             margin-right: auto;
             margin-top: 50px;
             position: fixed;
-            left: 250px;
-            top: 150px;
-
+            top: 100px;
+            right: 250px;
+            padding: 5px;
 
 
 
         }
+
+        #info {
+            width: 25%;
+            height: 25%;
+            color: white;
+            background-color: black;
+            border: 3px solid white;
+            border-radius: 20px;
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            position: fixed;
+            top: 350px;
+            right: 250px;
+            padding: 5px;
+            text-align: justify;
+
+        }
     </style>
     <script>
-        function showDetails(planet) {
+        var names = ["mercury ", "venus", "earth", "mars"];
+        var circrumfrence = ["15329km ", "38025km ", "40075km ", "21266km "];
+        var distancefromsun = ["57.9 million km ", "108.2 million km ", "149.6 million km ", "227.9 million km "];
+        var info = ["Mercury is the smallest planet in our solar system and the closest to the Sun orbiting it every 88 Earth days. It is a rocky, cratered world, similar in appearance to Earth's Moon, with extreme temperature swings from 430°C in the day to -180°C at night. It has no significant atmosphere and is the fastest planet in the solar system.", "Venus is the second planet from the Sun and Earth's closest, similarly sized neighbor, often called its twin. It is the hottest planet in the Solar System—with surface temperatures around —due to a thick toxic carbon dioxide atmosphere and sulfuric acid clouds. Venus rotates backwards and extremely slowly, meaning its day lasts longer than its year.", "Earth is the third planet from the Sun and the only known place in the universe to harbor life. It has a diverse climate and geography, with 70% of its surface covered by water. Earth's atmosphere is rich in nitrogen and oxygen, supporting a wide variety of ecosystems. It has one natural satellite, the Moon, which influences tides and stabilizes Earth's axial tilt.", "Mars is the fourth planet from the Sun and is often called the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface. It has a thin atmosphere primarily composed of carbon dioxide and experiences seasonal changes similar to Earth."]
+        function showDetails(planetNumber) {
             var details = document.getElementById("details");
             details.style.display = "block";
-            details.innerHTML = "<h2>" + planet + "</h2><p>Details about " + planet + " will go here.</p>";
+            details.innerHTML = "<h2>" + "name: " + names[planetNumber] + "</h2>" +
+                "<h2>" + "circumference: " + circrumfrence[planetNumber] + "</h2>" +
+                "<h2>" + "distance from sun: " + distancefromsun[planetNumber] + "</h2>";
+            var infobox = document.getElementById("info");
+            infobox.style.display = "block";
+            infobox.innerHTML = "<p>" + info[planetNumber] + "</p>";
+
         }
 
 
@@ -72,17 +101,22 @@
 
 <body>
     <div id="main">
-        <div id="mercury" class="planets" onclick="showDetails('mercury')">
+        <div id="mercury" class="planets" onclick="showDetails(0)">
             <img src="mercury.jpeg">
 
         </div>
-        <div id="venus" class="planets" onclick="showDetails('venus')">
+        <div id="venus" class="planets" onclick="showDetails(1)">
             <img src="venus.jpg">
         </div>
-        <div id="earth" class="planets" onclick="showDetails('earth')">
+        <div id="earth" class="planets" onclick="showDetails(2)">
             <img src="earth.jpeg">
 
         </div>
+        <div id="mars" class="planets" onclick="showDetails(3)">
+            <img src="mars.jpeg">
+        </div>
+
+
 
 
 
@@ -91,6 +125,10 @@
     </div>
     <div id="details">
 
+
+
+    </div>
+    <div id="info">
 
     </div>
 </body>
